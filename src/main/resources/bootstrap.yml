@@ -1,7 +1,7 @@
 spring:
   cloud:
     config:
-      uri: http://http://94.191.119.192:8888
+      uri: http://94.191.119.192:8888
       name: ecs-redis
       label: master
       profile: prod
