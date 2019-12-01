@@ -5,3 +5,10 @@ spring:
       name: ecs-redis
       label: master
       profile: prod
+
+logging:
+  file: "/root/ecs/redis-log.log"
+  level:
+    cn.lhz: debug
+  pattern:
+    console: "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%thread]){faint} %clr(%-40.40logger{39}){cyan} %L %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}"
