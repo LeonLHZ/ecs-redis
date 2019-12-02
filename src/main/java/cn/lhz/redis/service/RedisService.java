@@ -5,6 +5,6 @@ package cn.lhz.redis.service;
  * @date 2019/11/19
  */
 public interface RedisService {
-    public void set(String key, Object value, long seconds);
+    public void put(String key, Object value, long seconds);
     public Object get(String key);
 }

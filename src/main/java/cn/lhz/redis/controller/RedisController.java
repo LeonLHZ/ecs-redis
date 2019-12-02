@@ -16,19 +16,19 @@ public class RedisController {
     @Autowired
     private RedisService redisService;
 
-    @RequestMapping(value = "put", method = RequestMethod.GET)
-    public String set(String key, String value, long seconds) {
-        redisService.set(key, value, seconds);
+    @RequestMapping(value = "put", method = RequestMethod.POST)
+    public String put(String key, String value, long seconds) {
+        redisService.put(key, value, seconds);
         return RESULT_OK;
     }
 
-    @RequestMapping(value = "find", method = RequestMethod.GET)
-    public String find(String key) {
-        String json = null;
-
+    @RequestMapping(value = "get", method = RequestMethod.GET)
+    public String get(String key) {
+        String json =null;
         Object obj = redisService.get(key);
         if (obj != null) {
-            json = (String) redisService.get(key);
+           json = (String) redisService.get(key);
+
         }
 
         return json;
