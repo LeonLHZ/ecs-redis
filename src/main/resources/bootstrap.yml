@@ -5,18 +5,6 @@ spring:
       name: ecs-redis
       label: master
       profile: prod
-eureka:
-  client:
-    register-with-eureka: true
-    service-url:
-        defaultZone: http://116.62.156.171:8761/eureka/
-  instance:
-    #health-check-url: http://${eureka.instance.ip-address}:${eureka.instance.non-secure-port}/health
-   # status-page-url: http://${eureka.instance.ip-address}:${eureka.instance.non-secure-port}/doc.html
-    instance-id: ${eureka.instance.ip-address}:${spring.application.name}:${eureka.instance.non-secure-port}
-    prefer-ip-address: true
-    ip-address: 94.191.119.192
-    non-secure-port: 8084
 
 logging:
   file: "/root/ecs/redis-log.log"
